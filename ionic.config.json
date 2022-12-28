@@ -1,0 +1,7 @@
+{
+  "name": "minty-ai-art",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
