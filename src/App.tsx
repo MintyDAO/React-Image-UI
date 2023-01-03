@@ -1,8 +1,12 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact
+} from '@ionic/react';
+import Button from '@material-ui/core/Button';
+import MenuIcon from '@material-ui/core/IconButton';
+import {Menu} from './components/Menu'
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-
+import Subscription from './pages/Subscription'; 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -21,19 +25,18 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import IconButton from '@material-ui/core/IconButton';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+      <IonReactRouter>
+      <Menu />
+      <IonRouterOutlet  id="main">
+        <Route path="/home" component={Home} exact={true} />
+        <Route path="/subscription" component={Subscription} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

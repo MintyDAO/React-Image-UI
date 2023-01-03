@@ -1,0 +1,43 @@
+.form-card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.images-upload-box{
+    height: 200px;
+    padding: 20px;
+}
+
+.form-control{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.form-control ion-input{
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.ion-card{
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.uploaded-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.upload-promt{
+    font-size: 14px;
+    font-weight: 500;
+}
